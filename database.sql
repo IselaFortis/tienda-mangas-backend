@@ -12,7 +12,8 @@ CREATE TABLE mangas (
   id INT AUTO_INCREMENT PRIMARY KEY,
   titulo VARCHAR(80) NOT NULL,
   autor VARCHAR(60),
-  precio DECIMAL(6,2) NOT NULL
+  precio DECIMAL(6,2) NOT NULL,
+  imagen VARCHAR(500)
 );
 
 CREATE TABLE ventas (
@@ -26,8 +27,8 @@ CREATE TABLE ventas (
 );
 
 INSERT INTO clientes (nombre, telefono) VALUES ('Carlos Mejía','7777-1234'), ('Lucía Ramos','7888-5678');
-INSERT INTO mangas (titulo, autor, precio) VALUES
-  ('One Piece Vol. 1','Eiichiro Oda',9.99),
-  ('Berserk Vol. 1','Kentaro Miura',14.50),
-  ('Chainsaw Man Vol. 1','Tatsuki Fujimoto',9.99);
+INSERT INTO mangas (titulo, autor, precio, imagen) VALUES
+  ('One Piece Vol. 1','Eiichiro Oda',9.99,'https://covers.openlibrary.org/b/isbn/9781569319017-L.jpg?default=false'),
+  ('Berserk Vol. 1','Kentaro Miura',14.50,'https://covers.openlibrary.org/b/isbn/9781593070205-L.jpg?default=false'),
+  ('Chainsaw Man Vol. 1','Tatsuki Fujimoto',9.99,'https://covers.openlibrary.org/b/isbn/9781974709939-L.jpg?default=false');
 INSERT INTO ventas (cliente_id, manga_id, cantidad, fecha) VALUES (1,1,2,'2026-10-01'), (2,2,1,'2026-10-02');

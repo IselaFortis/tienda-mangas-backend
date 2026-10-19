@@ -63,7 +63,7 @@ app.get('/ventas', seguro(async (req, res) => {
 }));
 
 crud('clientes', 'clientes', ['nombre', 'telefono']);
-crud('mangas', 'mangas', ['titulo', 'autor', 'precio']);
+crud('mangas', 'mangas', ['titulo', 'autor', 'precio', 'imagen']);
 crud('ventas', 'ventas', ['cliente_id', 'manga_id', 'cantidad', 'fecha']);
 
 app.listen(PORT, () => console.log(`API Tienda de Mangas en puerto ${PORT}`));
